@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded",function () {
     //Para el fondo
     var btnActivarVerdeDivision = document.getElementById("activarVerdeDivision");
     btnActivarVerdeDivision.addEventListener("click",function () {
-        var parrafos = document.querySelectorAll("#parrafos p");
+        var parrafos = document.querySelectorAll("#parrafos p a");
         parrafos.forEach(parrafo => {
             parrafo.style.backgroundColor = "green"; 
         });
@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded",function () {
     //Para el fondo
     var btnDesactivarVerdeDivision = document.getElementById("desactivarVerdeDivision");
     btnDesactivarVerdeDivision.addEventListener("click",function () {
-        var parrafos = document.querySelectorAll("#parrafos p");
+        var parrafos = document.querySelectorAll("#parrafos p a");
         parrafos.forEach(parrafo =>{
             parrafo.style.backgroundColor = "white";
         });
