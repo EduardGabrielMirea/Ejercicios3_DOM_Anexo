@@ -30,4 +30,24 @@ document.addEventListener("DOMContentLoaded",function () {
         document.body.appendChild(divNumeroEnlaces);
     });
 
+    var btnReferenciaEnlacesParrafo = document.getElementById("referenciaEnlacesParrafo");
+    btnReferenciaEnlacesParrafo.addEventListener("click",function () {
+      var parrafos = document.querySelectorAll("#parrafos p");
+
+      parrafos.forEach((parrafo, index)=>{
+            var enlaces = parrafo.querySelectorAll("a");
+            let linksPorParrafo = "";
+
+            enlaces.forEach((link, i)=>{
+                linksPorParrafo += `Enlace ${i +1 } del parrafo ${link.href}\n`;
+            });
+        
+            var divNumeroEnlaces = document.createElement("div");
+            var pNumeroEnlaces = document.createElement("p");
+            divNumeroEnlaces.appendChild(pNumeroEnlaces);
+    
+            divNumeroEnlaces.textContent = `Párrafo ${index + 1}: ${linksPorParrafo}`;
+            document.body.appendChild(divNumeroEnlaces);
+        });
+    });
 });
