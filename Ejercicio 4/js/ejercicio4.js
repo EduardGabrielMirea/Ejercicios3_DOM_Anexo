@@ -61,6 +61,7 @@ document.addEventListener("DOMContentLoaded",function () {
     });
     
     //Para el fondo
+    //Con document.querySelectorAll puedes usar metodos como el forEach().
     var btnActivarVerdeDivision = document.getElementById("activarVerdeDivision");
     btnActivarVerdeDivision.addEventListener("click",function () {
         var parrafos = document.querySelectorAll("#parrafos p a");
