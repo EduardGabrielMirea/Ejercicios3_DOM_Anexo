@@ -70,6 +70,13 @@ document.addEventListener("DOMContentLoaded",function () {
     });
 
     //Para las letras
+    /*
+    Aquí, getElementsByTagName("a") 
+    devuelve una colección HTML (HTMLCollection) de elementos <a>, 
+    que no tiene el método forEach(). 
+    Por lo tanto, necesitas convertirla en un array utilizando Array.from() 
+    para poder utilizar forEach() en ella.
+    */
     var btnDesactivarVerdeLetras = document.getElementById("desactivarVerdeLetras");
     btnDesactivarVerdeLetras.addEventListener("click",function () {
         var parrafos = document.getElementsByTagName("a");
