@@ -51,16 +51,36 @@ document.addEventListener("DOMContentLoaded",function () {
         });
     });
 
-    var btnActivarVerde = document.getElementById("activarVerde");
-    btnActivarVerde.addEventListener("click",function () {
+    //Para las letras
+    var btnActivarVerdeLetras = document.getElementById("activarVerdeLetras");
+    btnActivarVerdeLetras.addEventListener("click",function () {
+        var parrafos = document.getElementsByTagName("a");
+        Array.from(parrafos).forEach(parrafo => {
+            parrafo.style.color = "green"; 
+        });
+    });
+    
+    //Para el fondo
+    var btnActivarVerdeDivision = document.getElementById("activarVerdeDivision");
+    btnActivarVerdeDivision.addEventListener("click",function () {
         var parrafos = document.querySelectorAll("#parrafos p");
         parrafos.forEach(parrafo => {
             parrafo.style.backgroundColor = "green"; 
         });
     });
 
-    var btnDesactivarVerde = document.getElementById("desactivarVerde");
-    btnDesactivarVerde.addEventListener("click",function () {
+    //Para las letras
+    var btnDesactivarVerdeLetras = document.getElementById("desactivarVerdeLetras");
+    btnDesactivarVerdeLetras.addEventListener("click",function () {
+        var parrafos = document.getElementsByTagName("a");
+        Array.from(parrafos).forEach(parrafo =>{
+            parrafo.style.color = "black";
+        });
+    });
+
+    //Para el fondo
+    var btnDesactivarVerdeDivision = document.getElementById("desactivarVerdeDivision");
+    btnDesactivarVerdeDivision.addEventListener("click",function () {
         var parrafos = document.querySelectorAll("#parrafos p");
         parrafos.forEach(parrafo =>{
             parrafo.style.backgroundColor = "white";
